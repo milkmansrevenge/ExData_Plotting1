@@ -15,11 +15,10 @@ power_data <- subset(power_data,
 ## Combine date and time
 power_data$Date_time <- as.POSIXct(paste(power_data$Date, power_data$Time))
 
+## Plot to PNG
+png(file = "plot2.png", height = 480, width = 480, bg = "transparent")
 plot(power_data$Global_active_power ~ power_data$Date_time,
-     type="l",
+     type= "l",
      ylab= "Global Active Power",
      xlab = "")
-
-## Save as PNG
-dev.copy(png, file = "plot2.png", height=480, width=480)
 dev.off()
