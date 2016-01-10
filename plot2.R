@@ -19,6 +19,6 @@ power_data$Date_time <- as.POSIXct(paste(power_data$Date, power_data$Time))
 png(file = "plot2.png", height = 480, width = 480, bg = "transparent")
 plot(power_data$Global_active_power ~ power_data$Date_time,
      type= "l",
-     ylab= "Global Active Power",
+     ylab= "Global Active Power (kilowatts)",
      xlab = "")
 dev.off()
